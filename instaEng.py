@@ -153,11 +153,9 @@ def main():
         total_comments = 0
 
         followers = get_followers()
-
         followers = to_int(followers.text)
 
         posts = get_posts()
-
         browser.execute_script('window.scrollTo(0, 150)')
 
         for post in posts:
@@ -165,13 +163,10 @@ def main():
 
             likes, comments = get_engagement(hover)
 
-            #print(likes, comments)
-
             total_likes += likes
             total_comments += comments
 
         engagement_rate = calc_engagement_rate((total_likes+comments)/len(posts), followers)
-
         engagement_rate = format(engagement_rate, '.2f')
 
         print(user, followers, insta_url, engagement_rate)
