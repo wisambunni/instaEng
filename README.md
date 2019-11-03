@@ -8,7 +8,7 @@ A python script that uses Selenium to calculate Instagram Engagement rates.
 
 ## Usage
 >```python
->```python instaEng.py <file_to_users>
+>python instaEng.py <file_to_users>
 >```
 
 ## Overview
